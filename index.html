@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-title" content="Maladies QC">
 <meta name="theme-color" content="#0f766e">
 <meta name="format-detection" content="telephone=no">
-<title>Maladies QC — Chien / Chat</title>
+<title>Maladies QC — DMV Briheche</title>
 <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADgklEQVR4nO3dTW7TUBiG0RR1jgfeAouhi4EZrIFhN0OnLMiDLIABElWlAnlNEvv+5PacGTEKkf3kc3LjhLv3Xz4d4JR3J28FcbDG5CASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB9H9YXTHb4/l7nz6+vkwrruBv2VfNIu3kMiwp5VqZRzq/ls1DTg5Gh6qaawRMuzkYLvR4mg74Y9jnV+GiqOHY3Ps4DHsZag42Nc4cfTzlD1280g2GicOdicOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROKg7+/KDnMt/2DfvG0chyx6TqTlaUUZne+lNpNDFjcxQrwgpac4jI1b2W+141DGDe09pxX6iMPYuK19aHIQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTjoI47mv504gKniPjQ56CYOw+OG9l6DyaGP6/ipSTrS8uet/URY57O25QtS55fO95L/NaFfU+t3/l3EMd5Jamp9XHdhnYNIHETiIBIHkTiI7vMmylo+fn/9x/np4fytdZgcbSx/Hvu/blnfWo04GljCkX6+fX1rTeKobVk9xlu27k4cROIgEgeROBBHN+bVFYstW3dnEaygJSxkzU8PJ993PP+F9a3r97wvp5VSltWFrH8P5+tb1rdWWyJzsU8RP398SJs2PstXOth9fpgcVcs4bHuWV14iEweROIjEQSQO3kAc/XwbYC62kFV5iWycOLoyh+O0/fiVu+fB4+hheEwvj2F9IWuLcvc87CJYD199m66t87/r5U34bKWl5bxFrVaVDDg5msyP6fKZcdGCZpM+ho2jZh/ThWVcvc5dOZGR46iQyFR4YLTtY/zXHD28hblRQ72V7d+y+YPTmt9OEAeROOpZdnrSVxse4iASB5E4iMRBJI565mKfyhYiDiJxVDUXu9inBHEQiaO2udg1pLsb/4O3Ds2/j3H/13OYHM3MZx/vVleCmRwtzS9H3TWkRM2vJT7JaYVIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYND8guvEeF7axFB2wAAAABJRU5ErkJggg==">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -34,6 +34,7 @@ input{font:inherit}
 a{color:var(--brand)}
 .top{position:sticky;top:0;z-index:20;background:var(--head);color:#fff;padding:calc(var(--sat) + 10px) calc(var(--sar) + 14px) 10px calc(var(--sal) + 14px)}
 .top h1{margin:0 0 8px;font-size:19px;font-weight:700;letter-spacing:.2px;display:flex;justify-content:space-between;align-items:center}
+.top h1 .who{display:block;font-size:13px;font-weight:600;opacity:.92;letter-spacing:.3px;margin-top:1px}
 .top h1 small{font-weight:500;font-size:12px;opacity:.85}
 .seg{display:flex;background:rgba(255,255,255,.18);border-radius:10px;padding:3px;gap:3px}
 .seg button{flex:1;padding:8px 6px;border-radius:8px;font-weight:600;font-size:15px;color:#fff;min-height:40px}
@@ -138,7 +139,7 @@ th{background:var(--brandsoft);color:var(--brand)}
 </head>
 <body>
 <header class="top" id="topbar">
-  <h1><span>Maladies QC</span><small id="subtitle"></small></h1>
+  <h1><span>Maladies QC<span class="who">DMV Briheche</span></span><small id="subtitle"></small></h1>
   <div class="seg" id="spseg">
     <button data-sp="chien" id="b-chien">🐕 Chiens</button>
     <button data-sp="chat" id="b-chat">🐈 Chats</button>
@@ -389,7 +390,7 @@ function renderRefs(){
   h+='<div class="sec"><h3>Supplémentation en potassium (vos notes)</h3><table><tr><th>K sérique (mEq/L)</th><th>KCl à ajouter (mEq/L de soluté)</th></tr><tr><td>3,5–4,5</td><td>20</td></tr><tr><td>3,0–3,5</td><td>30</td></tr><tr><td>2,5–3,0</td><td>40</td></tr><tr><td>2,0–2,5</td><td>60</td></tr><tr><td>&lt; 2,0</td><td>80</td></tr></table><div class="hint">Ne pas dépasser 0,5 mEq/kg/h de potassium.</div></div>';
   h+='<div class="sec"><h3>Fluidothérapie — repères de vos notes</h3><p>Soluté de choix : lactate de Ringer, sauf maladie hépatique (le NaCl 0,9 % peut mener à l\'acidose à long terme).</p><p>Doses de choc de vos notes : chien 90 mL/kg/h; chat 40 mL/kg/h.</p><div class="alert"><b>⚠ Mise à jour</b>Ces doses sont des maximums théoriques : fractionner en bolus (p. ex. 20 mL/kg en 20 minutes, comme dans vos notes de traumatologie) avec réévaluation après chaque bolus (AAHA/AAFP 2013; RECOVER 2026, premiers soins).</div></div>';
   h+='<div class="sec"><h3>Légende des statuts</h3><p><span class="tag vet">Vétérinaire · commercialisé au Canada</span><br>Produit répertorié « commercialisé » dans la BDPP de Santé Canada (classe vétérinaire).</p><p><span class="tag hum">Produit humain · hors AMM vétérinaire</span><br>Produit à usage humain commercialisé au Canada, utilisé hors indication chez l\'animal.</p><p><span class="tag mag">Magistral / non commercialisé</span><br>Aucun produit répertorié comme commercialisé : préparation magistrale, importation ou accès particulier.</p><p><span class="tag bio">Produit biologique (ACIA)</span><br>Vaccins, anticorps monoclonaux biologiques : hors BDPP (Agence canadienne d\'inspection des aliments).</p><p><span class="tag ctrl">Substance contrôlée</span><br>Prescription, registre et entreposage sécurisé requis.</p></div>';
-  h+='<div class="sec"><h3>À propos</h3><p>Contenu construit à partir de vos fichiers de cours (tableaux SAM1/urgences, notes SAM 2, cas CPE), puis confronté aux recommandations nord-américaines récentes et à la BDPP de Santé Canada (statut « commercialisé » vérifié le '+esc(META.dpd)+').</p><p>Aucune dose n\'est ajoutée par la mise à jour : les doses figurent uniquement dans « Vos notes » (texte d\'origine). Pour toute dose, se référer à la monographie du produit ou à un formulaire vétérinaire à jour.</p><p>Les notes « ⚠ À corriger / nuancer » signalent un point de vos documents qui diffère des pratiques ou de la disponibilité actuelles au Canada.</p><p>Outil d\'étude et d\'aide-mémoire : il ne remplace pas le jugement clinique, la monographie des produits ni les protocoles de la clinique.</p><div class="ver">Version '+esc(META.built)+'</div></div>';
+  h+='<div class="sec"><h3>À propos</h3><p><b>DMV Briheche</b> — aide-mémoire personnel, chiens et chats.</p><p>Contenu construit à partir de vos fichiers de cours (tableaux SAM1/urgences, notes SAM 2, cas CPE), puis confronté aux recommandations nord-américaines récentes et à la BDPP de Santé Canada (statut « commercialisé » vérifié le '+esc(META.dpd)+').</p><p>Aucune dose n\'est ajoutée par la mise à jour : les doses figurent uniquement dans « Vos notes » (texte d\'origine). Pour toute dose, se référer à la monographie du produit ou à un formulaire vétérinaire à jour.</p><p>Les notes « ⚠ À corriger / nuancer » signalent un point de vos documents qui diffère des pratiques ou de la disponibilité actuelles au Canada.</p><p>Outil d\'étude et d\'aide-mémoire : il ne remplace pas le jugement clinique, la monographie des produits ni les protocoles de la clinique.</p><div class="ver">Version '+esc(META.built)+'</div></div>';
   $("#p-ref").innerHTML=h;
 }
 function renderVeille(){
