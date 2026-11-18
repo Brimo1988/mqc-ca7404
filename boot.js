@@ -2,7 +2,7 @@
    La clé est dérivée du mot de passe (PBKDF2-SHA256). Sans le bon mot de passe, rien n'est lisible. */
 (function(){
   'use strict';
-  const SALT_B64 = 'H4cIun5qeBJbGMxmWDryzQ==', ITER = 250000, KEYSTORE = 'mqc_k';
+  const SALT_B64 = 'S6jUoQZu7acR/MvFzwHVsw==', ITER = 250000, KEYSTORE = 'mqc_k';
   const b64d = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
   const b64e = u => btoa(String.fromCharCode.apply(null, new Uint8Array(u)));
 
